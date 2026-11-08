@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Farrel Aqil, an Information Systems student focused on UI/UX, graphic design, and web development.">
+<title>Farrel Aqil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#home">Farrel<span>.Aqil</span></a>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="#tentang">What I Do</a></li>
+        <li><a href="#keahlian">Skill</a></li>
+        <li><a href="#proyek">Project</a></li>
+        <li><a href="#kontak">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="home">
+  <div class="hero">
+    <div class="hero-text">
+      <span class="tag"><i class="dot"></i> open to collaboration</span>
+      <h1>Designing interfaces that are <em>easy to use</em>, then building them.</h1>
+      <p class="lead">Hi, I’m Farrel. I’m an Information Systems student who loves UI/UX, graphic design, and technology, creating digital experiences that are clear and meaningful</p>
+      <div class="btns">
+        <a class="btn primary" href="#proyek">View projects</a>
+        <a class="btn" href="#kontak">Contact me</a>
+      </div>
+    </div>
+
+    <div class="visual">
+      <div class="avatar" role="img" aria-label="Farrel’s profile">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <circle cx="12" cy="8" r="4.2"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/>
+        </svg>
+      </div>
+      <span class="float f1">React &amp; JS</span>
+      <span class="float f2">UI/UX</span>
+      <span class="float f3">HTML &amp; CSS</span>
+    </div>
+  </div>
+
+  <div class="marquee" aria-label="Tools and skills">
+    <div class="track">
+      <div class="set"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX Design</span><span>Graphic Design</span><span>Java</span><span>Python</span></div>
+      <div class="set" aria-hidden="true"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX Design</span><span>Graphic Design</span><span>Java</span><span>Python</span></div>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <h2>What I Do</h2>
+    <p class="sub">Development &amp; Design</p>
+    <div class="about">
+      <p>I build responsive, user-friendly websites with HTML, CSS, JavaScript, and React. I also explore creative design, including UI/UX, graphic design, and digital content, and combine both to create experiences that are engaging and visually appealing.</p>
+      <div class="stats">
+        <div class="stat"><b>3</b><span>Years of experience</span></div>
+        <div class="stat"><b>10+</b><span>Tools &amp; technologies</span></div>
+        <div class="stat"><b>2+</b><span>Fields of study</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="keahlian">
+    <h2>Skills</h2>
+    <p class="sub">Skills I have mastered.</p>
+    <div class="skills">
+      <div class="skill"><div><span>HTML &amp; CSS</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
+      <div class="skill"><div><span>UI/UX Design</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
+      <div class="skill"><div><span>React</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
+      <div class="skill"><div><span>JavaScript</span><span>70%</span></div><div class="bar"><i style="--w:70%"></i></div></div>
+      <div class="skill"><div><span>Java</span><span>40%</span></div><div class="bar"><i style="--w:40%"></i></div></div>
+      <div class="skill"><div><span>Python</span><span>15%</span></div><div class="bar"><i style="--w:15%"></i></div></div>
+    </div>
+  </section>
+
+  <section id="proyek">
+    <h2>Elective Project</h2>
+    <p class="sub">Some of my recent work.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="thumb"><img src="image1.png" alt="Preview of the Website Cloning project" loading="lazy"></div>
+        <div class="body"><h3>Website Cloning</h3><p>Recreating existing websites to practice coding, UI implementation, and responsive design.</p><div class="chips"><span>React</span><span>Tailwind</span></div></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="image2.png" alt="Preview of the Mock E-commerce Website project" loading="lazy"></div>
+        <div class="body"><h3>Mock E-commerce Website</h3><p>A dummy online store to practice e-commerce UI design and frontend development.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div></div>
+      </article>
+      <article class="card">
+        <div class="thumb"><img src="image3.png" alt="Preview of the Personal Website project" loading="lazy"></div>
+        <div class="body"><h3>Personal Website</h3><p>A personal website to showcase my profile, skills, and projects.</p><div class="chips"><span>React</span><span>JSX</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="contact">
+      <h2>Let’s Work Together</h2>
+      <p class="sub">Got an idea or a project? Send a message and I’ll reply as soon as possible.</p>
+      <a class="mail" href="mailto:muhamadfarrelaqil@gmail.com">muhamadfarrelaqil@gmail.com</a>
+      <div><button class="copy" id="copyMail" type="button">Copy email</button></div>
+      <div class="links">
+        <a class="btn" href="https://www.linkedin.com/in/farrel-aqil/" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="btn" href="https://github.com/FarrelAqil" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a class="btn" href="https://www.instagram.com/thedaa.aq/" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Farrel Aqil</footer>
+<a class="to-top" id="toTop" href="#home" aria-label="Back to top">↑</a>
+
+<script>
+(function () {
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+  function setMenu(open) {
+    menu.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  burger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    setMenu(!menu.classList.contains("open"));
+  });
+  menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("click", function (e) {
+    if (!menu.contains(e.target) && !burger.contains(e.target)) setMenu(false);
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+})();
+(function () {
+  const btn = document.getElementById("themeToggle");
+  const root = document.documentElement;
+  const getTheme = () =>
+    root.getAttribute("data-theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  function update() {
+    const dark = getTheme() === "dark";
+    btn.textContent = dark ? "☀️" : "🌙";
+    const label = dark ? "Switch to light mode" : "Switch to dark mode";
+    btn.setAttribute("aria-label", label);
+    btn.setAttribute("title", label);
+  }
+  btn.addEventListener("click", function () {
+    const next = getTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    update();
+  });
+  update();
+})();
+(function () {
+  const bars = document.querySelectorAll(".bar");
+  if (!("IntersectionObserver" in window)) { bars.forEach(b => b.classList.add("on")); return; }
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add("on"); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.4 });
+  bars.forEach(b => io.observe(b));
+})();
+(function () {
+  const bar = document.getElementById("progress");
+  const toTop = document.getElementById("toTop");
+  function onScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = "scaleX(" + (max > 0 ? window.scrollY / max : 0) + ")";
+    toTop.classList.toggle("show", window.scrollY > 600);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  const links = document.querySelectorAll(".menu a");
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (a) {
+            a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id);
+          });
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    document.querySelectorAll("main section").forEach(function (s) { spy.observe(s); });
+  }
+})();
+(function () {
+  const btn = document.getElementById("copyMail");
+  const email = "muhamadfarrelaqil@gmail.com";
+  btn.addEventListener("click", async function () {
+    try {
+      await navigator.clipboard.writeText(email);
+      btn.textContent = "Copied ✓";
+    } catch (e) {
+      btn.textContent = "Copy it from above";
+    }
+    setTimeout(function () { btn.textContent = "Copy email"; }, 2000);
+  });
+})();
+</script>
+</body>
+</html>
