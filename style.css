@@ -540,3 +540,16 @@ footer { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 3
   .track { animation: none; }
   .progress { display: none; }
 }
+
+html { overflow-x: hidden; }         
+body { overflow-x: clip; }            
+@media (max-width: 760px) {
+  .hero::before { right: -40px; width: 320px; height: 320px; }
+  .f2 { right: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text > *, .visual { animation: none; }
+  .track { animation: none; }
+  .progress { display: none; }
+}
