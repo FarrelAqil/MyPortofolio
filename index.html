@@ -3,218 +3,313 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portfolio of Farrel Aqil, an Information Systems student focused on UI/UX, graphic design, and web development.">
-<title>Farrel Aqil</title>
+<title>Farrel Aqil — UI/UX &amp; Frontend</title>
+<meta name="description" content="Portfolio of Farrel Aqil, an Information Systems student focused on UI/UX, graphic design, and frontend development.">
+<meta name="theme-color" content="#020b1f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Farrel Aqil — UI/UX &amp; Frontend">
+<meta property="og:description" content="Information Systems student who loves UI/UX, graphic design, and technology.">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23020b1f'/%3E%3Ctext x='50' y='72' font-size='70' text-anchor='middle' fill='%2342e8ff' font-family='Impact,sans-serif'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script>
-  try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
-</script>
+<link rel="stylesheet" href="extra.css">
+<script>document.documentElement.className="wait"</script>
 </head>
 <body>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="logo" href="#home">Farrel<span>.Aqil</span></a>
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">🌙</button>
-        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <ul class="menu" id="menu">
-        <li><a href="#tentang">What I Do</a></li>
-        <li><a href="#keahlian">Skill</a></li>
-        <li><a href="#proyek">Project</a></li>
-        <li><a href="#kontak">Contact</a></li>
+<div class="video-bg" aria-hidden="true">
+  <video id="bgvideo" muted loop playsinline preload="none" poster="poster.jpg" disablepictureinpicture tabindex="-1"></video>
+</div>
+<audio id="bgm" loop preload="none">
+  <source src="Color.mp3" type="audio/mpeg">
+</audio>
+<div class="bg-slash" aria-hidden="true"></div>
+<div class="slash" id="slash" aria-hidden="true"></div>
+<main class="stage">
+  <aside class="left">
+    <div class="hud" aria-hidden="true">
+      <b id="day">--</b>
+      <div><span id="mon">---</span><span id="time">--:--</span></div>
+    </div>
+    <div class="menu-wrap">
+      <span class="cursor" id="cursor" aria-hidden="true"></span>
+      <ul class="menu" role="tablist" aria-label="Profile menu">
+        <li><button role="tab" id="t0" aria-controls="p0" data-desc="See who I am and what I like.">Profile</button></li>
+        <li><button role="tab" id="t1" aria-controls="p1" data-desc="Check the capabilities and level of each skill.">Skill</button></li>
+        <li><button role="tab" id="t2" aria-controls="p2" data-desc="Work that has been completed.">Project</button></li>
+        <li><button role="tab" id="t3" aria-controls="p3" data-desc="Contact me via email or social media.">Contact</button></li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap" id="home">
-  <div class="hero">
-    <div class="hero-text">
-      <span class="tag"><i class="dot"></i> open to collaboration</span>
-      <h1>Designing interfaces that are <em>easy to use</em>, then building them.</h1>
-      <p class="lead">Hi, I’m Farrel. I’m an Information Systems student who loves UI/UX, graphic design, and technology, creating digital experiences that are clear and meaningful</p>
-      <div class="btns">
-        <a class="btn primary" href="#proyek">View projects</a>
-        <a class="btn" href="#kontak">Contact me</a>
+    </div>
+    <div class="place"><small>Location</small><b>South Tangerang</b></div>
+  </aside>
+  <section class="panel" id="panel">
+    <div class="tab on" id="p0" role="tabpanel" aria-labelledby="t0" tabindex="0">
+      <h2>Profile</h2>
+      <div class="profile">
+        <div class="portrait"><span>F</span></div>
+        <div>
+          <p class="name">Farrel Aqil</p>
+          <p class="role">Information Systems · Student</p>
+          <p>Hi, I’m Farrel. I’m an Information Systems student who loves UI/UX, graphic design, and technology, creating digital experiences that are clear and meaningful.</p>
+          <p>Open to collaborations and small projects.</p>
+          <ul class="chips"><li>Lv. 19</li><li>Game</li><li>UI Design</li></ul>
+          <a class="cta" href="https://farrelaqil.vercel.app/" download>My personal Website</a>
+        </div>
       </div>
     </div>
 
-    <div class="visual">
-      <div class="avatar" role="img" aria-label="Farrel’s profile">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <circle cx="12" cy="8" r="4.2"/><path d="M4 21c0-4.4 3.6-7.5 8-7.5s8 3.1 8 7.5z"/>
-        </svg>
+    <div class="tab" id="p1" role="tabpanel" aria-labelledby="t1" tabindex="0">
+      <h2>Skill</h2>
+      <ul class="stats">
+        <li data-v="90"><span>HTML &amp; CSS</span><div class="bar"><i></i></div><em>90</em></li>
+        <li data-v="82"><span>React</span><div class="bar"><i></i></div><em>82</em></li>
+        <li data-v="67"><span>JavaScript</span><div class="bar"><i></i></div><em>67</em></li>
+        <li data-v="80"><span>UI/UX Design</span><div class="bar"><i></i></div><em>80</em></li>
+        <li data-v="50"><span>Java</span><div class="bar"><i></i></div><em>50</em></li>
+      </ul>
+    </div>
+
+    <div class="tab" id="p2" role="tabpanel" aria-labelledby="t2" tabindex="0">
+      <h2>Project</h2>
+      <div class="cards">
+        <div class="card"><div>
+          <img src="i3.png" alt="Dark-themed portfolio page of Farrel Aqil" loading="lazy">
+          <h3>Personal Website</h3>
+          <p>A personal website to showcase my profile, skills, and projects.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener">Demo</a>
+            <a href="https://github.com/FarrelAqil" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div></div>
+        <div class="card"><div>
+          <img src="i2.png" alt="Product catalog of SMK Store" loading="lazy">
+          <h3>Mock E-commerce Website</h3>
+          <p>A dummy online store to practice e-commerce UI design and frontend development.</p>
+          <ul class="tags"><li>React</li><li>CSS</li></ul>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener">Demo</a>
+            <a href="https://github.com/FarrelAqil" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div></div>
+        <div class="card"><div>
+          <img src="i1.png" alt="Home page of Petani Kode" loading="lazy">
+          <h3>Website Cloning</h3>
+          <p>Recreating existing websites to practice coding, UI implementation, and responsive design.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+          <div class="card-links">
+            <a href="#" target="_blank" rel="noopener">Demo</a>
+            <a href="https://github.com/FarrelAqil" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div></div>
       </div>
-      <span class="float f1">React &amp; JS</span>
-      <span class="float f2">UI/UX</span>
-      <span class="float f3">HTML &amp; CSS</span>
     </div>
-  </div>
 
-  <div class="marquee" aria-label="Tools and skills">
-    <div class="track">
-      <div class="set"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX Design</span><span>Graphic Design</span><span>Java</span><span>Python</span></div>
-      <div class="set" aria-hidden="true"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>UI/UX Design</span><span>Graphic Design</span><span>Java</span><span>Python</span></div>
-    </div>
-  </div>
-
-  <section id="tentang">
-    <h2>What I Do</h2>
-    <p class="sub">Development &amp; Design</p>
-    <div class="about">
-      <p>I build responsive, user-friendly websites with HTML, CSS, JavaScript, and React. I also explore creative design, including UI/UX, graphic design, and digital content, and combine both to create experiences that are engaging and visually appealing.</p>
-      <div class="stats">
-        <div class="stat"><b>3</b><span>Years of experience</span></div>
-        <div class="stat"><b>10+</b><span>Tools &amp; technologies</span></div>
-        <div class="stat"><b>2+</b><span>Fields of study</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="keahlian">
-    <h2>Skills</h2>
-    <p class="sub">Skills I have mastered.</p>
-    <div class="skills">
-      <div class="skill"><div><span>HTML &amp; CSS</span><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-      <div class="skill"><div><span>UI/UX Design</span><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
-      <div class="skill"><div><span>React</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
-      <div class="skill"><div><span>JavaScript</span><span>70%</span></div><div class="bar"><i style="--w:70%"></i></div></div>
-      <div class="skill"><div><span>Java</span><span>40%</span></div><div class="bar"><i style="--w:40%"></i></div></div>
-      <div class="skill"><div><span>Python</span><span>15%</span></div><div class="bar"><i style="--w:15%"></i></div></div>
-    </div>
-  </section>
-
-  <section id="proyek">
-    <h2>Elective Project</h2>
-    <p class="sub">Some of my recent work.</p>
-    <div class="cards">
-      <article class="card">
-        <div class="thumb"><img src="image1.png" alt="Preview of the Website Cloning project" loading="lazy"></div>
-        <div class="body"><h3>Website Cloning</h3><p>Recreating existing websites to practice coding, UI implementation, and responsive design.</p><div class="chips"><span>React</span><span>Tailwind</span></div></div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="image2.png" alt="Preview of the Mock E-commerce Website project" loading="lazy"></div>
-        <div class="body"><h3>Mock E-commerce Website</h3><p>A dummy online store to practice e-commerce UI design and frontend development.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div></div>
-      </article>
-      <article class="card">
-        <div class="thumb"><img src="image3.png" alt="Preview of the Personal Website project" loading="lazy"></div>
-        <div class="body"><h3>Personal Website</h3><p>A personal website to showcase my profile, skills, and projects.</p><div class="chips"><span>React</span><span>JSX</span></div></div>
-      </article>
-    </div>
-  </section>
-
-  <section id="kontak">
-    <div class="contact">
-      <h2>Let’s Work Together</h2>
-      <p class="sub">Got an idea or a project? Send a message and I’ll reply as soon as possible.</p>
-      <a class="mail" href="mailto:muhamadfarrelaqil@gmail.com">muhamadfarrelaqil@gmail.com</a>
-      <div><button class="copy" id="copyMail" type="button">Copy email</button></div>
+    <div class="tab" id="p3" role="tabpanel" aria-labelledby="t3" tabindex="0">
+      <h2>Contact</h2>
       <div class="links">
-        <a class="btn" href="https://www.linkedin.com/in/farrel-aqil/" target="_blank" rel="noopener">💼 LinkedIn</a>
-        <a class="btn" href="https://github.com/FarrelAqil" target="_blank" rel="noopener">🐙 GitHub</a>
-        <a class="btn" href="https://www.instagram.com/thedaa.aq/" target="_blank" rel="noopener">📸 Instagram</a>
+        <a href="mailto:muhamadfarrelaqil@gmail.com">Email <small>muhamadfarrelaqil@gmail.com</small></a>
+        <a href="https://www.linkedin.com/in/farrel-aqil/" target="_blank" rel="noopener">LinkedIn <small>Farrel Aqil</small></a>
+        <a href="https://github.com/FarrelAqil" target="_blank" rel="noopener">GitHub <small>@FarrelAqil</small></a>
+        <a href="https://www.instagram.com/thedaa.aq/" target="_blank" rel="noopener">Instagram <small>@thedaa.aq</small></a>
       </div>
     </div>
   </section>
 </main>
 
-<footer>© 2026 Farrel Aqil</footer>
-<a class="to-top" id="toTop" href="#home" aria-label="Back to top">↑</a>
+<footer class="hint">
+  <p id="desc" aria-live="polite"></p>
+  <div class="hint-right">
+    <button class="music" id="music" type="button" aria-pressed="false">♪ Music: OFF</button>
+    <span class="keys" aria-hidden="true"><kbd>↑</kbd><kbd>↓</kbd>Choose</span>
+  </div>
+</footer>
 
 <script>
-(function () {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("menu");
-  function setMenu(open) {
-    menu.classList.toggle("open", open);
-    burger.setAttribute("aria-expanded", String(open));
-    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+(function(){
+  var NAMES=['profile','skill','project','contact'];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  var panes=[].slice.call(document.querySelectorAll('.tab'));
+  var panel=document.getElementById('panel');
+  var cursor=document.getElementById('cursor');
+  var slash=document.getElementById('slash');
+  var desc=document.getElementById('desc');
+  var cur=0, audio, focusNext=false;
+  var vid=document.getElementById('bgvideo');
+  var conn=navigator.connection||{};
+  var okVideo=vid && !reduce && !conn.saveData && window.matchMedia('(min-width: 821px)').matches;
+  if(okVideo){
+    var src=document.createElement('source');
+    src.src='11121.mp4'; src.type='video/mp4';
+    vid.appendChild(src);
+    vid.muted=true; vid.preload='auto';
+    var playVid=function(){var p=vid.play(); if(p&&p.catch)p.catch(function(){})};
+    playVid();
+    document.addEventListener('pointerdown',playVid,{once:true});
   }
-  burger.addEventListener("click", function (e) {
-    e.stopPropagation();
-    setMenu(!menu.classList.contains("open"));
-  });
-  menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
-  document.addEventListener("click", function (e) {
-    if (!menu.contains(e.target) && !burger.contains(e.target)) setMenu(false);
-  });
-  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
-})();
-(function () {
-  const btn = document.getElementById("themeToggle");
-  const root = document.documentElement;
-  const getTheme = () =>
-    root.getAttribute("data-theme") ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  function update() {
-    const dark = getTheme() === "dark";
-    btn.textContent = dark ? "☀️" : "🌙";
-    const label = dark ? "Switch to light mode" : "Switch to dark mode";
-    btn.setAttribute("aria-label", label);
-    btn.setAttribute("title", label);
+  var bgm=document.getElementById('bgm'), mbtn=document.getElementById('music');
+  bgm.volume=.35;
+  function pref(){try{return localStorage.getItem('musik')}catch(e){return null}}
+  function savePref(v){try{localStorage.setItem('musik',v)}catch(e){}}
+  function showMusic(){
+    var on=!bgm.paused;
+    mbtn.setAttribute('aria-pressed',on);
+    mbtn.textContent='♪ Music: '+(on?'ON':'OFF');
   }
-  btn.addEventListener("click", function () {
-    const next = getTheme() === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    try { localStorage.setItem("theme", next); } catch (e) {}
-    update();
-  });
-  update();
-})();
-(function () {
-  const bars = document.querySelectorAll(".bar");
-  if (!("IntersectionObserver" in window)) { bars.forEach(b => b.classList.add("on")); return; }
-  const io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { en.target.classList.add("on"); io.unobserve(en.target); }
-    });
-  }, { threshold: 0.4 });
-  bars.forEach(b => io.observe(b));
-})();
-(function () {
-  const bar = document.getElementById("progress");
-  const toTop = document.getElementById("toTop");
-  function onScroll() {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.transform = "scaleX(" + (max > 0 ? window.scrollY / max : 0) + ")";
-    toTop.classList.toggle("show", window.scrollY > 600);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-  const links = document.querySelectorAll(".menu a");
-  if ("IntersectionObserver" in window) {
-    const spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          links.forEach(function (a) {
-            a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id);
-          });
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    document.querySelectorAll("main section").forEach(function (s) { spy.observe(s); });
-  }
-})();
-(function () {
-  const btn = document.getElementById("copyMail");
-  const email = "muhamadfarrelaqil@gmail.com";
-  btn.addEventListener("click", async function () {
-    try {
-      await navigator.clipboard.writeText(email);
-      btn.textContent = "Copied ✓";
-    } catch (e) {
-      btn.textContent = "Copy it from above";
+  bgm.addEventListener('play',showMusic);
+  bgm.addEventListener('pause',showMusic);
+  mbtn.addEventListener('click',function(){
+    if(bgm.paused){
+      bgm.preload='auto';
+      var p=bgm.play(); if(p&&p.catch)p.catch(function(){});
+      savePref('on');
+    }else{
+      bgm.pause(); savePref('off');
     }
-    setTimeout(function () { btn.textContent = "Copy email"; }, 2000);
   });
+  document.addEventListener('pointerdown',function(e){
+    if(e.target.closest&&e.target.closest('#music')) return;
+    if(pref()!=='off'){var p=bgm.play(); if(p&&p.catch)p.catch(function(){})}
+  },{once:true});
+  showMusic();
+  function blip(f1,f2,vol,len){
+    try{
+      audio=audio||new (window.AudioContext||window.webkitAudioContext)();
+      var o=audio.createOscillator(), g=audio.createGain();
+      o.type='square'; o.frequency.value=f1; g.gain.value=vol;
+      o.connect(g); g.connect(audio.destination);
+      o.frequency.exponentialRampToValueAtTime(f2,audio.currentTime+len-.01);
+      o.start(); o.stop(audio.currentTime+len);
+    }catch(e){}
+  }
+  var hasInteracted=false;
+  document.addEventListener('pointerdown',function(){hasInteracted=true},{once:true});
+  document.addEventListener('keydown',function(){hasInteracted=true},{once:true});
+  function moveCursor(){
+    var li=tabs[cur].parentNode;
+    cursor.style.width=li.offsetWidth+'px';
+    cursor.style.height=li.offsetHeight+'px';
+    cursor.style.transform='translate('+li.offsetLeft+'px,'+li.offsetTop+'px) skewX(-14deg)';
+  }
+  function replay(el,cls){el.classList.remove(cls); void el.offsetWidth; el.classList.add(cls)}
+  var rows=[].slice.call(document.querySelectorAll('.stats li'));
+  rows.forEach(function(li){li.querySelector('.bar i').style.setProperty('--v',li.dataset.v+'%')});
+  function countUp(){
+    rows.forEach(function(li){
+      var em=li.querySelector('em'), to=+li.dataset.v;
+      if(reduce){em.textContent=to; return}
+      var t0=performance.now(), dur=800;
+      (function step(t){
+        var k=Math.min(1,(t-t0-300)/dur); if(k<0)k=0;
+        em.textContent=Math.round(to*(1-Math.pow(1-k,3)));
+        if(k<1) requestAnimationFrame(step);
+      })(t0);
+    });
+  }
+
+  function select(i,quiet){
+    var prev=cur;
+    cur=(i+tabs.length)%tabs.length;
+    tabs.forEach(function(t,k){
+      t.setAttribute('aria-selected',k===cur);
+      t.tabIndex=k===cur?0:-1;
+      panes[k].classList.toggle('on',k===cur);
+    });
+    desc.textContent=tabs[cur].getAttribute('data-desc');
+    moveCursor();
+    if(!quiet && prev!==cur){
+      replay(panel,'wipe'); replay(slash,'go');
+      if(hasInteracted) blip(880,1320,.03,.07);
+    }
+    if(cur===1) countUp();
+    if(focusNext){tabs[cur].focus(); focusNext=false}
+  }
+
+  function fromHash(){
+    var i=NAMES.indexOf(location.hash.replace('#',''));
+    return i<0?0:i;
+  }
+  function go(i,focus){
+    i=(i+tabs.length)%tabs.length;
+    if(i===cur) return;
+    focusNext=!!focus;
+    location.hash=NAMES[i];      
+  }
+  window.addEventListener('hashchange',function(){select(fromHash())});
+
+  tabs.forEach(function(t,k){
+    t.addEventListener('click',function(){go(k)});
+    t.addEventListener('mouseenter',function(){if(hasInteracted&&k!==cur) blip(600,700,.015,.04)});
+    t.addEventListener('keydown',function(e){
+      var key=e.key;
+      if(key==='ArrowDown'||key==='ArrowRight'){e.preventDefault();go(cur+1,true)}
+      else if(key==='ArrowUp'||key==='ArrowLeft'){e.preventDefault();go(cur-1,true)}
+      else if(key==='Home'){e.preventDefault();go(0,true)}
+      else if(key==='End'){e.preventDefault();go(tabs.length-1,true)}
+    });
+  });
+
+  var sx=0, sy=0;
+  panel.addEventListener('touchstart',function(e){
+    var t=e.changedTouches[0]; sx=t.clientX; sy=t.clientY;
+  },{passive:true});
+  panel.addEventListener('touchend',function(e){
+    var t=e.changedTouches[0], dx=t.clientX-sx, dy=t.clientY-sy;
+    if(Math.abs(dx)>60 && Math.abs(dy)<40){
+      if(dx<0 && cur<tabs.length-1) go(cur+1);
+      if(dx>0 && cur>0) go(cur-1);
+    }
+  },{passive:true});
+
+  select(fromHash(),true);
+  window.addEventListener('resize',moveCursor);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(moveCursor);
+  function tick(){
+    var d=new Date();
+    document.getElementById('day').textContent=d.getDate();
+    document.getElementById('mon').textContent=d.toLocaleDateString('en-US',{month:'short',weekday:'short'}).toUpperCase();
+    document.getElementById('time').textContent=('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2);
+  }
+  tick(); setInterval(tick,15000);
+  var startEl=document.createElement('button');
+  var letters='Farrel Aqil'.split('').map(function(c,i){
+    return c===' '?'<i class="sp"></i>':'<i style="--i:'+i+'">'+c+'</i>';
+  }).join('');
+  startEl.type='button'; startEl.className='start';
+  startEl.setAttribute('aria-label','Farrel Aqil. Press any key to start');
+  var touch=window.matchMedia('(hover: none)').matches;
+  startEl.innerHTML='<i class="ring"></i><b aria-hidden="true">'+letters+'</b>'
+    +'<em class="sub" aria-hidden="true"></em><i class="load"></i>'
+    +'<span aria-hidden="true">'+(touch?'Tap to start':'▶ Press any key to start')+'</span>'
+    +'<small class="c1" aria-hidden="true">South Tangerang</small><small class="c2" aria-hidden="true">Portfolio</small>';
+  document.body.appendChild(startEl);
+  startEl.focus({preventScroll:true});
+  function begin(){
+    if(!startEl) return;
+    var el=startEl, root=document.documentElement; startEl=null;
+    if(pref()!=='off'){bgm.preload='auto'; var p=bgm.play(); if(p&&p.catch)p.catch(function(){})}
+    if(typeof playVid==='function') playVid();
+    blip(330,1320,.04,.2);
+    el.classList.add('out');
+    var done=function(){el.remove(); root.classList.remove('wait')}; 
+    if(reduce){done(); return}
+    replay(slash,'go');                  
+    setTimeout(done,240);                
+  }
+  startEl.addEventListener('click',begin);
+  if(!reduce) startEl.addEventListener('pointermove',function(e){ 
+    if(!startEl) return;
+    startEl.style.setProperty('--px',(e.clientX/window.innerWidth-.5)*2);
+    startEl.style.setProperty('--py',(e.clientY/window.innerHeight-.5)*2);
+  });
+  document.addEventListener('keydown',function(e){
+    if(!startEl||e.key==='Tab'||e.key==='Shift'||e.ctrlKey||e.metaKey||e.altKey) return;
+    e.preventDefault(); begin();
+  },true);
 })();
 </script>
 </body>
