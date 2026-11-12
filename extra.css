@@ -1,0 +1,106 @@
+body{min-height:100vh; min-height:100dvh}
+@media (max-width:820px){
+  .video-bg video{display:none}
+}
+.tab:focus-visible{outline:3px solid var(--cyan); outline-offset:6px}
+.portrait img{display:block}
+.tags{list-style:none; display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0; padding:0}
+.tags li{
+  background:rgba(255,255,255,.14); color:var(--ink); font-weight:700; font-size:.9rem;
+  padding:0 10px; letter-spacing:.05em;
+}
+.card-links{display:flex; gap:10px; margin-top:12px}
+.card-links a{
+  font-family:var(--display); font-size:1rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--navy); background:#fff; padding:2px 14px; text-decoration:none;
+  transform:skewX(-14deg); box-shadow:4px 3px 0 var(--cyan); transition:translate .12s;
+}
+.card-links a:hover{translate:4px 0}
+.card-links a:focus-visible{outline:3px solid var(--cyan); outline-offset:3px}
+.cta{
+  display:inline-block; margin-top:18px; padding:8px 26px; background:var(--cyan); color:var(--navy);
+  font-family:var(--display); font-size:1.3rem; letter-spacing:.06em; text-transform:uppercase; text-decoration:none;
+  transform:skewX(-14deg); box-shadow:6px 5px 0 var(--blue); transition:translate .12s;
+}
+.cta:hover{translate:6px 0}
+.cta:focus-visible{outline:3px solid #fff; outline-offset:3px}
+@media (max-width:820px){
+  .hint{gap:10px}
+  .hint p{font-size:.95rem; padding:8px 40px 8px 16px}
+  .music{font-size:.95rem; padding:2px 12px}
+  .stage{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){
+  .video-bg{display:none}
+}
+.start{
+  position:fixed; inset:0; z-index:15; width:100%; border:0; cursor:pointer; color:#fff; text-align:center; overflow:hidden;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:24px;
+  background:radial-gradient(120% 90% at 85% 10%, var(--blue) 0%, var(--deep) 40%, var(--navy) 100%);
+}
+.start > *{position:relative}
+.start::before{
+  content:""; position:absolute; inset:-120px; pointer-events:none;
+  background:repeating-linear-gradient(115deg, transparent 0 46px, rgba(66,232,255,.12) 46px 48px);
+  animation:drift 2.4s linear infinite;
+}
+.start::after{
+  content:""; position:absolute; top:0; bottom:0; left:0; width:30%; background:var(--cyan); opacity:.85;
+  transform:skewX(-20deg); pointer-events:none; animation:bandIn .8s cubic-bezier(.6,0,.3,1) both;
+}
+@keyframes bandIn{from{translate:-150% 0}to{translate:450% 0; opacity:0}}
+.start .ring{
+  position:absolute; width:78vmin; height:78vmin; right:-18vmin; bottom:-18vmin; border-radius:50%; pointer-events:none;
+  background:repeating-conic-gradient(rgba(66,232,255,.32) 0 1.2deg, transparent 1.2deg 15deg);
+  -webkit-mask:radial-gradient(circle, transparent 60%, #000 61% 72%, transparent 73%);
+  mask:radial-gradient(circle, transparent 60%, #000 61% 72%, transparent 73%);
+  translate:calc(var(--px,0) * -26px) calc(var(--py,0) * -18px); transition:translate .25s;
+  animation:spin 70s linear infinite, startFade 1s .3s both;
+}
+@keyframes startFade{from{opacity:0}}
+.start b{
+  display:flex; font-family:var(--display); font-weight:400; font-size:clamp(3.2rem,13vw,8rem); line-height:1;
+  text-transform:uppercase; text-shadow:6px 6px 0 var(--blue);
+  translate:calc(var(--px,0) * 14px) calc(var(--py,0) * 10px);
+  transition:translate .25s, scale .24s ease-in;
+  animation:shadowIn .6s .7s var(--ease) both;
+}
+@keyframes shadowIn{from{text-shadow:30px 22px 0 rgba(11,79,209,0)}to{text-shadow:6px 6px 0 var(--blue)}}
+.start b i{
+  display:inline-block; font-style:normal;
+  animation:letterIn .6s calc(.2s + var(--i,0) * .05s) var(--ease) both;
+}
+.start b .sp{width:.3em}
+@keyframes letterIn{from{opacity:0; transform:translateY(70%) skewX(-14deg)}to{opacity:1; transform:none}}
+.start .sub{
+  font-style:normal; font-weight:700; font-size:clamp(1.1rem,3vw,1.5rem); letter-spacing:.2em; text-transform:uppercase;
+  color:var(--cyan); animation:inL .5s .6s var(--ease) both;
+}
+.start .load{display:block; width:min(320px,60vw); height:6px; background:rgba(255,255,255,.18); transform:skewX(-20deg); overflow:hidden}
+.start .load::after{content:""; display:block; height:100%; background:linear-gradient(90deg,var(--cyan),#fff); animation:loadFill .9s .5s var(--ease) both}
+@keyframes loadFill{from{width:0}to{width:100%}}
+.start span{
+  font-family:var(--display); font-size:clamp(1.3rem,4vw,1.9rem); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--navy); background:var(--cyan); padding:4px 26px; transform:skewX(-14deg);
+  animation:inL .5s 1.4s var(--ease) both, blink 1s 2s steps(2) infinite;
+}
+@keyframes blink{50%{opacity:.45}}
+.start small{
+  position:absolute; bottom:calc(18px + env(safe-area-inset-bottom,0px)); font-family:var(--body); font-weight:700;
+  font-size:.95rem; letter-spacing:.16em; text-transform:uppercase; opacity:.7; animation:startFade .6s 1.2s both;
+}
+.start .c1{left:24px}
+.start .c2{right:24px}
+.start:focus-visible{outline:4px solid var(--cyan); outline-offset:-12px}
+.start.out{pointer-events:none}
+.start.out b{scale:1.2}
+.bar i{position:relative}
+.tab.on .bar i::after{
+  content:""; position:absolute; top:0; bottom:0; left:0; width:40%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.9),transparent);
+  animation:glint .7s 1.15s ease-out both;
+}
+@keyframes glint{from{translate:-120% 0}to{translate:320% 0}}
+.wait .hud, .wait .menu li, .wait .place, .wait .panel, .wait .panel *, .wait .hint p, .wait .bg-slash{
+  animation-play-state:paused!important;
+}
