@@ -30,6 +30,7 @@ body{min-height:100vh; min-height:100dvh}
   .music{font-size:.95rem; padding:2px 12px}
   .stage{padding-bottom:70px}
 }
+
 @media (prefers-reduced-motion:reduce){
   .video-bg{display:none}
 }
@@ -91,6 +92,7 @@ body{min-height:100vh; min-height:100dvh}
 }
 .start .c1{left:24px}
 .start .c2{right:24px}
+
 .start:focus-visible{outline:4px solid var(--cyan); outline-offset:-12px}
 .start.out{pointer-events:none}
 .start.out b{scale:1.2}
@@ -104,3 +106,4 @@ body{min-height:100vh; min-height:100dvh}
 .wait .hud, .wait .menu li, .wait .place, .wait .panel, .wait .panel *, .wait .hint p, .wait .bg-slash{
   animation-play-state:paused!important;
 }
+.stage{overflow-x:clip}
